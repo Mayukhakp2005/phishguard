@@ -7,7 +7,7 @@ export interface PredictionResponsePayload {
 }
 
 export async function requestUrlPrediction(target_url_string: string): Promise<PredictionResponsePayload> {
-  const backend_api_endpoint = 'http://127.0.0.1:8000/predict';
+  const backend_api_endpoint = 'https://phishguard-1-mw66.onrender.com/predict';
 
   const http_response = await fetch(backend_api_endpoint, {
     method: 'POST',
