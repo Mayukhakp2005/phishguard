@@ -25,8 +25,8 @@ def test_prediction_for_google_url():
     assert api_response.status_code == 200
     response_json_payload = api_response.json()
     assert response_json_payload["url"] == target_url_string
-    assert response_json_payload["prediction"] in ["SAFE", "SUSPICIOUS", "DANGER"]
-    assert 0 <= response_json_payload["risk_score"] <= 100
+    assert response_json_payload["prediction"] == "SAFE"
+    assert 0 <= response_json_payload["risk_score"] <= 45
     assert 0.0 <= response_json_payload["confidence"] <= 100.0
     assert isinstance(response_json_payload["indicators"], list)
 
@@ -37,8 +37,8 @@ def test_prediction_for_github_url():
     assert api_response.status_code == 200
     response_json_payload = api_response.json()
     assert response_json_payload["url"] == target_url_string
-    assert response_json_payload["prediction"] in ["SAFE", "SUSPICIOUS", "DANGER"]
-    assert 0 <= response_json_payload["risk_score"] <= 100
+    assert response_json_payload["prediction"] == "SAFE"
+    assert 0 <= response_json_payload["risk_score"] <= 45
     assert 0.0 <= response_json_payload["confidence"] <= 100.0
     assert isinstance(response_json_payload["indicators"], list)
 
@@ -49,8 +49,8 @@ def test_prediction_for_paypal_suspicious_url():
     assert api_response.status_code == 200
     response_json_payload = api_response.json()
     assert response_json_payload["url"] == target_url_string
-    assert response_json_payload["prediction"] in ["SAFE", "SUSPICIOUS", "DANGER"]
-    assert 0 <= response_json_payload["risk_score"] <= 100
+    assert response_json_payload["prediction"] == "DANGER"
+    assert 76 <= response_json_payload["risk_score"] <= 100
     assert 0.0 <= response_json_payload["confidence"] <= 100.0
     assert isinstance(response_json_payload["indicators"], list)
 

@@ -73,9 +73,9 @@ class PhishingPredictionService:
 
         risk_score_value = int(round(phishing_probability * 100.0))
 
-        if risk_score_value <= 30:
+        if risk_score_value <= 45:
             prediction_label = 'SAFE'
-        elif risk_score_value <= 70:
+        elif risk_score_value <= 75:
             prediction_label = 'SUSPICIOUS'
         else:
             prediction_label = 'DANGER'

@@ -72,9 +72,9 @@ The model outputs probability distribution $\mathbf{p} = [p_{\text{phishing}}, p
 
 | Risk Score Range | Classification | Action / Meaning |
 | :--- | :--- | :--- |
-| **`0 - 30`** | **`SAFE`** | Low risk; URL demonstrates standard legitimate characteristics. |
-| **`31 - 70`** | **`SUSPICIOUS`** | Moderate risk; URL exhibits structural warning signs requiring caution. |
-| **`71 - 100`** | **`DANGER`** | High risk; strong phishing indicators and structural obfuscation detected. |
+| **`0 - 45`** | **`SAFE`** | Low risk; URL demonstrates standard legitimate characteristics. |
+| **`46 - 75`** | **`SUSPICIOUS`** | Moderate risk; URL exhibits structural warning signs requiring caution. |
+| **`76 - 100`** | **`DANGER`** | High risk; strong phishing indicators and structural obfuscation detected. |
 
 ---
 
